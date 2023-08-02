@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+#header-pc {
+	display: none;
+}
+
+#header-M {
+	display: block;
+	
+}
+
+#header-M .headerM-inner {
+	
+}
+#wrap > section > img.c {
+	display: none;
+}
+
+#wrap > section > img.d {
+	display: block;
+}
+
+/*footer*/
+
+
+#footer-pc {
+	padding:  0px 0px;
+	box-sizing: border-box;
+}
+
+#footer-pc > ul{
+	width: 100%;
+	display: block;
+	padding-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+
+#footer-pc > ul > li{
+	 width: 100%;
+	margin-bottom: 35px;
+	 font-family:"맑은 고딕"
+}
+
+#footer-pc > ul > li:first-of-type{
+	width: 100%;
+}
+
+
+#footer-pc > ul > li > h3{
+	margin-bottom: 10px;
+}
+
+#footer-pc ul.ft-cs {
+	display: flex;
+	margin-top: 15px;
+}
+
+#footer-pc > ul > li > ul > li {
+	padding: 1px 0;
+
+}
+#footer-pc .ft-menu-txt-m {
+	display: inline-block;
+}
+#footer-pc .ft-menu-txt-pc {
+	display: none;
+}
+
+/*///////////////////////////////////[modal]///////////////////////////////////*/
+
+button#modal {
+	bottom: 18px;
+    right: 18px;
+}

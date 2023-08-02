@@ -1,0 +1,445 @@
+@font-face {
+    font-family: 'NotoSerifKR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{margin: 0; padding: 0;}
+a {text-decoration: none; color: inherit;}
+li {list-style: none;}
+i, em, address {font-style: normal;}
+
+html {font-size: 10px; 
+font-family: 'NotoSerifKR';}
+
+header {
+	position: relative;
+	z-index: 100;
+}
+
+#popUp {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #000000;
+    text-align: center;
+    transition: 0.3s;
+	font-family: "맑은 고딕";
+}
+
+#popUp > p {
+    line-height: 30px;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+#popUp > p > a {
+    display: block;
+    font-size: 1.2rem;
+}
+
+#popUp.on {
+	display: none;
+}
+
+/*///////////////////////////////////[헤더-pc]///////////////////////////////////*/
+
+#header-pc {
+    position: fixed;
+    left: 0;
+    top: 0;
+	width: 100%;
+    padding: 50px 50px 0;
+    box-sizing: border-box;
+	font-size: 1.8rem;
+	color: #ffffff;
+}
+#header-pc > div {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+#header-pc nav {
+	
+}
+#header-pc nav > ul {
+	
+}
+#header-pc nav > ul > li{
+	padding: 2px 0;
+}
+
+#header-pc nav ul.submenu-pc {	
+	display: none;
+}
+
+#header-pc nav ul.submenu-pc > li {
+	padding-left: 10px;
+}
+
+#header-pc nav ul.submenu-pc > li > a {
+}
+
+#header-pc nav > ul > li > a:hover,
+ul.submenu-pc > li > a:hover,
+#header-pc aside > ul > li > a:hover,
+ul.languageBox > li > a:hover{
+	border-bottom: 2px solid white;
+}
+.yelloTxt{
+	color: #EDC900 !important;
+}
+
+.yelloTxt > a:hover{
+	border-bottom: 2px solid #EDC900 !important;
+}
+
+#header-pc nav > ul > input{
+	margin-top: 5.5rem;
+	border: none;
+	background-color: transparent;
+	font-family: 'NotoSerifKR';
+	font-size: 1.8rem;
+	outline: none;
+}
+
+input::placeholder{
+	border: none;
+	background-color: transparent;
+	color: #ffffff;
+}
+/*aside*/
+
+#header-pc aside > ul {
+	display: flex;
+}
+
+#header-pc aside > ul > li {
+	margin-left: 50px;	
+}
+#header-pc aside > ul > li:first-of-type {
+	position: relative;
+}
+#header-pc aside > ul > li:first-of-type::after {
+	content: "∨";
+    position: absolute;
+    top: 0;
+    right: -16px;
+    transition: 0.3s;
+    color: #fff;
+	cursor: pointer;
+}
+#header-pc aside > ul > li.change:first-of-type::after {
+	transform: rotate(-180deg);
+}
+
+#header-pc aside ul.languageBox {
+	display: none;
+}
+
+#header-pc aside ul.languageBox > li {
+	
+}
+
+/*///////////////////////////////////[header-m]///////////////////////////////////*/
+
+#header-M {
+	display: none;
+	position: fixed;
+    left:0;
+    top: 30px;
+	width: 100%;
+	padding: 12px 17px;
+	box-sizing: border-box;
+	z-index: 100;
+}
+#header-M.on {
+	top: 0;
+	background-color: white;
+}
+
+#header-M .headerM-inner {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+    align-items: center;
+}
+#header-M ul.nav-m {
+	display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+	width: 25px;
+	height: 21px;
+	cursor: pointer;
+}
+#header-M ul.nav-m > li {
+	width: 100%;
+	height: 1px;
+	background-color: white; transition: 0.3s;
+}
+#header-M ul.nav-m > li.change {background-color: black;}
+
+#header-M > .headerM-inner > h1 {
+	display: none;
+	margin-left: 50px;
+	width: 110px;
+	
+}
+#header-M > .headerM-inner > h1 > a {
+	display: block;
+}
+#header-M > .headerM-inner > h1 > a > img {
+	width: 110px;
+	object-fit: cover;
+}
+#header-M > .headerM-inner > h1.on {
+	display: block;
+}
+
+#header-M ul.aside-m {
+	display: flex;
+}
+#header-M ul.aside-m > li {
+	width: 24px;
+	height: 24px;
+	margin-left: 18px;
+}
+#header-M ul.aside-m > li > img {
+	width: 24px;
+	height: 25px;
+	object-fit: cover;
+}
+
+#header-M ul.aside-m > .a.on {
+	display: none;
+}
+#header-M ul.aside-m > .b.on {
+	display: block;
+}
+#header-M ul.aside-m > .b {
+	display: none;
+}
+
+/* 모바일 메뉴 슬라이드 */
+#header-M .mobile-slide-menu {
+	position: fixed;
+	left: 0;
+	top: 90.86px;
+	width: 0;
+	height: 100vh;
+	background-color: white;
+	opacity: 0;
+	transition: 0.3s;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	font-size: 1.8rem;
+	
+}
+
+#header-M .mobile-slide-menu.on {
+	width: 100%;
+	opacity: 1;
+}
+
+#header-M .mobile-slide-menu > ul {
+	height: auto;
+}
+#header-M .mobile-slide-menu > ul > li {
+	padding: 2px 0;
+	box-sizing: border-box
+}
+#header-M .mobile-slide-menu > ul > li:nth-of-type(2),
+#header-M .mobile-slide-menu > ul > li:nth-of-type(6){
+	margin-bottom: 20px;
+}
+
+#header-M .mobile-slide-menu > ul > li:nth-of-type(4){
+	margin-bottom: 86px;
+}
+
+
+#header-M .mobile-slide-menu > ul > li > ul {
+	padding-left: 18px;
+	box-sizing: border-box
+}
+#header-M .mobile-slide-menu > ul > li > ul.m-slide-menu {
+	display: none;	
+}
+
+#header-M .mobile-slide-menu > ul > li > ul > li {
+	padding:3px;
+	box-sizing: border-box
+}
+
+#header-M .mobile-slide-menu > ul > li > a:hover,
+#header-M .mobile-slide-menu > ul > li > ul > li > a:hover,
+#header-M .languageBox2 > li > a:hover{
+	border-bottom: 2px solid black;
+}
+#header-M .mobile-slide-menu > p {
+	width: 100%;
+	height: 150px;
+}
+
+#header-M .languageBox2 {
+	padding-left: 0px !important;
+	box-sizing: border-box;
+	display: none;
+}
+/*///////////////////////////////////[visual area]///////////////////////////////////*/
+
+#wrap {
+    width: 100%;
+    height: auto;
+	font-family: 'SUITE-Regular';
+}
+
+#wrap > section {
+    width: 100%;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+#wrap > section > img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+#wrap > section > img.d {
+	display: none;
+	vertical-align: middle;
+}
+
+#wrap > section > p {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+/*///////////////////////////////////[footer area]///////////////////////////////////*/
+
+footer {
+	width: 100%;
+	font-size: 1.4rem;
+}
+
+#footer-pc {
+	width: 100%;
+	padding: 0 50px 90px;
+	box-sizing: border-box;
+}
+
+#footer-pc > ul{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 50px;
+	box-sizing: border-box;
+}
+
+#footer-pc > ul > li{
+	 width: 10%;
+	 font-family:"맑은 고딕"
+}
+
+#footer-pc > ul > li:first-of-type{
+	width: 32.5%;
+}
+#footer-pc > ul > li:last-of-type {
+	font-family: 'NotoSerifKR';
+}
+
+#footer-pc > ul > li > h3{
+	margin-bottom: 15px;
+	font-family: 'MapoFlowerIsland';
+}
+
+#footer-pc > ul > li > span > p:first-of-type{
+	color: lightgray;
+	margin: 3px;
+}
+
+#footer-pc ul.ft-cs {
+	display: flex;
+	margin-top: 20px;
+}
+
+#footer-pc ul.ft-cs > li {
+	
+}
+
+#footer-pc ul.ft-cs > li:nth-of-type(n+2)::before {
+	content: "|";
+	margin: 4px;
+}
+
+#footer-pc ul.ft-cs > li > a{
+	font-size: 1.0rem;
+}
+
+#footer-pc > ul > li > ul > li {
+	padding: 3.5px 0;
+	font-size: 1.4rem;
+}
+#footer-pc .ft-menu-txt-m {
+	display: none;
+}
+
+#footer-pc ul.ft-cs > li:last-of-type a:hover {
+	border-bottom: none;
+}
+
+#footer-pc > ul > li > ul > li > a:hover {
+	border-bottom: 1.5px solid black;
+}
+
+.fa-phone:before,
+.fa-clock-four:before, .fa-clock:before,
+.fa-check:before{
+    font-size: 1.0rem;
+	margin-right: 10px;
+}
+
+/*///////////////////////////////////[modal]///////////////////////////////////*/
+
+
+button.btn-open-popup {
+	position: fixed;
+    bottom: 20px;
+    right: 50px;
+    width: 80px;
+    height: 80px;
+	border: none;
+    border-radius: 40px;
+    font-size: 1.2rem;
+	font-weight: bold;
+    opacity: 0;
+	background-color: #f2f2f2;
+	cursor: pointer;
+}
+
+
